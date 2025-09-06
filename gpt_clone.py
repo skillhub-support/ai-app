@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 from openai import OpenAI
 import tiktoken
@@ -7,8 +8,9 @@ def init_page():
     st.header("🤖 AI Chat App")
 
 def get_openai_client():
-    """OpenAIクライアントを初期化"""
-    return OpenAI()
+    """OpenAIクライアントを初期化（Secrets または 環境変数からキーを取得）"""
+    return OpenAI(api_key=os.environ["OPENAI_API_KEY"])
+
 
 def select_model():
     model = st.sidebar.radio("Choose a model:", ("GPT-4.1", "GPT-4.1-mini"))
