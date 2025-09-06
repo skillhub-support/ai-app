@@ -26,7 +26,7 @@ def select_model():
 def get_token_count(messages, model_name, response_text=""):
     """手動でトークン数を計算"""
     try:
-        # モデルに応じたエンコーダーを取得
+        # モデルに応じたエンコーダーを取得!!
         if "gpt-4" in model_name.lower():
             encoding = tiktoken.encoding_for_model("gpt-4")
         else:
