@@ -5,7 +5,7 @@ import tiktoken
 
 def init_page():
     st.set_page_config(page_title="AI Chat App", page_icon="🤖")
-    st.header("🤖 AI Chat App")
+    st.header("🤖 AI Chat App（GPTクローン）")
 
 def get_openai_client():
     """OpenAIクライアントを初期化（Secrets または 環境変数からキーを取得）"""
